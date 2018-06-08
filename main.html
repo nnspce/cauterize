@@ -141,9 +141,27 @@
         font-size: 12px;
     }
 
+    #outer {
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       background: -webkit-linear-gradient(left top, #f8f8f8, #f8f8f8);
+       /* For Safari 5.1 to 6.0 */
+       background: -o-linear-gradient(bottom right, #f8f8f8, #f8f8f8);
+       /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(bottom right, #f8f8f8, #f8f8f8);
+       /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to bottom right, #f8f8f8, #f8f8f8);
+       /* Standard syntax */
+   }
+
     #container {
         position: relative;
-        margin: 5% auto;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 0% auto;
         width: 1110px;
         height: 486px;
         display: grid;
@@ -773,7 +791,7 @@
     </style>
 </head>
 <body>
-
+ <div id="outer">
   <div id="container">
 
     <div id="credit">
@@ -2122,7 +2140,7 @@
 
     </section><!--wrapper-->
   </div><!--container-->
-
+</div><!--outer-->
 
 
  <!--SCRIPTS
